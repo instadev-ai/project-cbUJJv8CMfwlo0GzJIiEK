@@ -5,24 +5,24 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 export function Navbar() {
   return (
-    <div className="border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="flex h-14 items-center px-8">
-        <div className="flex flex-1 items-center justify-between space-x-2 md:justify-end">
-          <div className="w-full flex-1 md:w-auto md:flex-none">
-            <div className="relative">
+    <nav className="sticky top-0 z-10 w-full border-b bg-background">
+      <div className="flex h-16 items-center px-8">
+        <div className="flex flex-1 items-center justify-between">
+          <div className="flex-1">
+            <div className="relative w-full max-w-md">
               <Search className="absolute left-2 top-2.5 h-4 w-4 text-muted-foreground" />
               <Input
                 placeholder="Search..."
-                className="pl-8 md:w-[300px] lg:w-[400px]"
+                className="pl-8 w-full"
               />
             </div>
           </div>
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-4">
             <Button variant="ghost" size="icon">
-              <Bell className="h-4 w-4" />
+              <Bell className="h-5 w-5" />
             </Button>
             <Button variant="ghost" size="icon">
-              <Settings className="h-4 w-4" />
+              <Settings className="h-5 w-5" />
             </Button>
             <Avatar>
               <AvatarImage src="/placeholder.svg" />
@@ -31,6 +31,6 @@ export function Navbar() {
           </div>
         </div>
       </div>
-    </div>
+    </nav>
   );
 }
