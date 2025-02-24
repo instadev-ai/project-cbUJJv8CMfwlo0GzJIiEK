@@ -6,11 +6,11 @@ import { SidebarInset } from "@/components/ui/sidebar";
 
 const Dashboard = () => {
   return (
-    <div className="flex min-h-screen">
+    <div className="flex min-h-screen bg-background">
       <DashboardSidebar />
-      <SidebarInset>
+      <SidebarInset className="flex flex-col">
         <Navbar />
-        <main className="container space-y-4 p-8 pt-6">
+        <div className="flex-1 space-y-4 p-8 pt-6">
           <div className="flex items-center justify-between space-y-2">
             <h2 className="text-3xl font-bold tracking-tight">Dashboard</h2>
           </div>
@@ -18,7 +18,7 @@ const Dashboard = () => {
             <DashboardStats />
             <DashboardCharts />
           </div>
-        </main>
+        </div>
       </SidebarInset>
     </div>
   );
