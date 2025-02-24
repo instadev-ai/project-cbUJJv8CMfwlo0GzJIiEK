@@ -2,12 +2,13 @@ import { DashboardSidebar } from "@/components/layout/Sidebar";
 import { Navbar } from "@/components/layout/Navbar";
 import { DashboardStats } from "@/components/dashboard/Stats";
 import { DashboardCharts } from "@/components/dashboard/Charts";
+import { SidebarInset } from "@/components/ui/sidebar";
 
 const Dashboard = () => {
   return (
     <div className="flex min-h-screen">
       <DashboardSidebar />
-      <div className="flex-1">
+      <SidebarInset>
         <Navbar />
         <main className="container space-y-4 p-8 pt-6">
           <div className="flex items-center justify-between space-y-2">
@@ -18,7 +19,7 @@ const Dashboard = () => {
             <DashboardCharts />
           </div>
         </main>
-      </div>
+      </SidebarInset>
     </div>
   );
 };
